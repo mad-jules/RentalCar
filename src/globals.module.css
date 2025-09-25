@@ -1,0 +1,26 @@
+:global(:root[data-theme="light"]) {
+  --main-text-color: #101828;
+  --secondary-text-color: #8e929a;
+  --button-color: #3470ff;
+  --button-hover: #0b44cd;
+  --input-active-bg-color: #dadde1;
+  --header-bg-color: #f2f4f7;
+  --input-bg-color: #f7f7f7;
+  --main-bg-color: #ffffff;
+}
+
+:global(:root[data-theme="dark"]) {
+  --main-text-color: #f2f4f7; /* світлий текст */
+  --secondary-text-color: #a0a4aa; /* трохи темніший вторинний текст */
+  --button-color: #3470ff; /* можна залишити яскравим для контрасту */
+  --button-hover: #6090ff; /* світліший ховер */
+  --input-active-bg-color: #3a3b3c; /* темний фон активного інпута */
+  --header-bg-color: #1b1c1e; /* темний фон хедера */
+  --input-bg-color: #2a2b2d; /* темний фон інпутів */
+  --main-bg-color: #101112; /* основний темний фон */
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
