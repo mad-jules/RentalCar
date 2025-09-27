@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
+import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 
 const HomePage = lazy(() =>
   import("./pages/HomePage/Home").then((module) => ({
@@ -7,23 +8,25 @@ const HomePage = lazy(() =>
   }))
 );
 const CatalogPage = lazy(() =>
-  import("./pages/Catalog").then((module) => ({ default: module.CatalogPage }))
+  import("./pages/Catalog/Catalog").then((module) => ({
+    default: module.CatalogPage,
+  }))
 );
 const CatalogByIdPage = lazy(() =>
-  import("./pages/CatalogById").then((module) => ({
+  import("./pages/CatalogById/CatalogById").then((module) => ({
     default: module.CatalogByIdPage,
   }))
 );
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<CatalogByIdPage />} />
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="catalog" element={<CatalogPage />} />
+        <Route path="catalog/:id" element={<CatalogByIdPage />} />
+      </Route>
+    </Routes>
   );
 }
 

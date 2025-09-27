@@ -1,19 +1,22 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-
-import "./globals.module.css";
-import "./i18n";
+import { ToastContainer } from "react-toastify";
 
 import App from "./App.tsx";
 import { ThemeProvider } from "./theme/ThemeProvider.tsx";
 
+import "./globals.module.css";
+import "./i18n";
+import "react-datepicker/dist/react-datepicker.css";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/">
-      <ThemeProvider>
+    <ThemeProvider>
+      <BrowserRouter basename="/">
         <App />
-      </ThemeProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+      <ToastContainer />
+    </ThemeProvider>
   </StrictMode>
 );
