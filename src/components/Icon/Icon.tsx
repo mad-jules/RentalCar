@@ -3,6 +3,7 @@ import React from "react";
 export enum ICON_NAMES {
   LOGO = "logo",
   HEART = "heart",
+  HEART_FILL = "heart-fill",
   CHEVRON_DOWN = "chevron-down",
   CHEVRON_UP = "chevron-up",
   LOCATION = "location",
@@ -10,6 +11,7 @@ export enum ICON_NAMES {
   FUEL_PUMP = "fuel-pump",
   GEAR = "gear",
   CHECK_CIRCLE = "check-circle",
+  SPLITTER = "splitter",
 }
 
 export type IconName = `${ICON_NAMES}`;
@@ -24,7 +26,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 
 export function Icon({
   name,
-  color = "black",
+  color = "inherit",
   height = "16px",
   width = "16px",
   size,

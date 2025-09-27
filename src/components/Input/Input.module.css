@@ -1,0 +1,22 @@
+.wrapper {
+  transition: background-color var(--main-transition);
+}
+
+.wrapper:hover,
+.wrapper:focus {
+  background-color: var(--input-active-bg-color);
+}
+
+.wrapper:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.wrapper:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.input {
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 16px;
+}
