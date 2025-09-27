@@ -1,0 +1,79 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  height: 424px;
+  overflow: auto;
+}
+
+.image {
+  border-radius: 14px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  width: 276px;
+  height: 268px;
+}
+
+.icon_heart {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  color: var(--header-bg-color);
+  fill: var(--button-color);
+  transition: color 250ms linear;
+}
+
+.icon_heart:hover,
+.icon_heart:focus {
+  color: var(--button-hover);
+}
+
+.active {
+  color: var(--button-color);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.accent {
+  color: var(--button-color);
+}
+
+.title_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.info_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--secondary-text-color);
+}
+
+.list_wrap {
+  display: flex;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding-left: 6px;
+}
+
+.list_item:first-child {
+  padding-left: 0;
+}
+
+.icon_splitter {
+  color: var(--input-active-bg-color);
+}
