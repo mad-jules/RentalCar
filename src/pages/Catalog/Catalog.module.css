@@ -1,0 +1,24 @@
+.catalog_container {
+  padding-top: 84px;
+  padding-bottom: 124px;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 200px 200px 320px 156px;
+  align-items: end;
+  justify-content: center;
+  column-gap: 16px;
+  padding-bottom: 56px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--secondary-text-color);
+  margin-bottom: 8px;
+}
