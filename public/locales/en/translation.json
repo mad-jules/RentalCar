@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "theme": "Change theme",
+    "home": "Home",
+    "catalog": "Catalog"
+  },
+  "HomePage": {
+    "title": "Find your perfect rental car",
+    "subtitle": "Reliable and budget-friendly rentals for any journey",
+    "button": "View Catalog"
+  },
+  "CatalogPage": {
+    "brand": "Car brand",
+    "chooseBrand": "Choose a brand",
+    "price": "Price / 1 hour",
+    "choosePrice": "Choose a price",
+    "InputGroup": {
+      "mileage": "Сar mileage / km",
+      "from": "From",
+      "to": "To"
+    },
+    "search": "Search",
+    "readMore": "Read more",
+    "loadMore": "Load more"
+  }
+}
