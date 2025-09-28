@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+.textarea {
+  border-radius: 12px;
+  background-color: var(--input-bg-color);
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 12px 20px;
+}
+
+.textarea::placeholder {
+  color: var(--input-placeholder-color);
+}
+.textarea:hover,
+.textarea:focus {
+  background-color: var(--input-active-bg-color);
+}
+.error {
+}
