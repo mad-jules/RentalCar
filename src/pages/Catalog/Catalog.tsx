@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getBrands, getCars } from "../../services/carService";
 import {
   Dropdown,
@@ -17,6 +17,7 @@ import css from "./Catalog.module.css";
 import { formatNumberString } from "../../utils/formatStringNumber";
 import { useTranslation } from "react-i18next";
 import { blurOnMouseUp } from "../../utils/Handler";
+import { Loader } from "../../components/Loader/Loader";
 
 export function CatalogPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,16 +33,8 @@ export function CatalogPage() {
     })
   );
 
-  const {
-    cars,
-    setCars,
-
-    appendCars,
-    clearCars,
-
-    filter,
-    updateFilters,
-  } = useCarStore();
+  const { cars, setCars, appendCars, clearCars, filter, updateFilters } =
+    useCarStore();
 
   useEffect(() => {
     const initializeData = async () => {
@@ -121,6 +114,7 @@ export function CatalogPage() {
   }
 
   const handleLoadMore = async () => {
+    setIsLoading(true);
     const { cars } = await getCars(
       prepareCarParams({ ...filter, page: currentPage + 1 })
     );
@@ -128,8 +122,9 @@ export function CatalogPage() {
     setCurrentPage((prev) => (prev += 1));
 
     appendCars(cars);
+    setIsLoading(false);
   };
-  console.log("cars", cars);
+
   return (
     <Container className={css.catalog_container}>
       <div className={css.filter}>
@@ -180,8 +175,9 @@ export function CatalogPage() {
           {t("CatalogPage.search")}
         </Button>
       </div>
-      {isLoading ? <>loading..</> : <CarList cars={cars} />}
-      {totalPages > 1 && currentPage < totalPages ? (
+      {cars && <CarList cars={cars} />}
+      {isLoading && <Loader />}
+      {totalPages > 1 && currentPage < totalPages && !isLoading ? (
         <Button
           style={{ margin: "auto" }}
           onClick={handleLoadMore}
