@@ -6,9 +6,8 @@ import { ToastContainer } from "react-toastify";
 import App from "./App.tsx";
 import { ThemeProvider } from "./theme/ThemeProvider.tsx";
 
-import "./globals.module.css";
+import "./globals.css";
 import "./i18n";
-import "react-datepicker/dist/react-datepicker.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

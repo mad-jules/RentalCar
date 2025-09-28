@@ -1,6 +1,6 @@
 @import "normalize.css";
 
-:global(:root[data-theme="light"]) {
+:root[data-theme="light"] {
   --main-text-color: #101828;
   --secondary-text-color: #8e929a;
   --button-color: #3470ff;
@@ -19,7 +19,7 @@
   --input-placeholder-color: #8d929a;
 }
 
-:global(:root[data-theme="dark"]) {
+:root[data-theme="dark"] {
   --main-text-color: #f2f4f7; /* світлий текст */
   --secondary-text-color: #a0a4aa; /* трохи темніший вторинний текст */
   --button-color: #3470ff; /* можна залишити яскравим для контрасту */
