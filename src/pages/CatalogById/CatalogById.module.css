@@ -80,6 +80,7 @@
 .car_info {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .info_group_title {

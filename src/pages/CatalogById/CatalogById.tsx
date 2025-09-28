@@ -94,7 +94,7 @@ export function CatalogByIdPage() {
     <section className={css.car_section}>
       <Container>
         <div className={css.wrapper}>
-          <div>
+          <div style={{ flex: 1 }}>
             <img
               className={css.img}
               src={car.img}
