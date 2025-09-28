@@ -6,7 +6,7 @@ export interface CarFilter
   extends Required<Nullable<Omit<fetchCarsParams, "page" | "limit">>> {}
 
 type CarStoreState = {
-  cars: Car[];
+  cars: Car[] | null;
   filter: CarFilter;
   favorite: string[];
 };
@@ -22,7 +22,7 @@ type CarStoreActions = {
 
 type CarStore = CarStoreState & CarStoreActions;
 
-const INITIAL_CARS: Car[] = [];
+const INITIAL_CARS = null;
 const INITIAL_FAVORITES: string[] = [];
 const INITIAL_FILTERS: CarFilter = {
   brand: null,
@@ -41,7 +41,14 @@ export const useCarStore = create<CarStore>()(
         set({ cars });
       },
       appendCars(cars) {
-        set((state) => ({ cars: [...state.cars, ...cars] }));
+        set((state) => {
+          if (!state.cars) {
+            return { cars: [...cars] };
+          }
+          return {
+            cars: [...state.cars, ...cars],
+          };
+        });
       },
       clearCars() {
         set({ cars: INITIAL_CARS });
