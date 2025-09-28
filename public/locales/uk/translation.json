@@ -22,5 +22,25 @@
     "search": "Пошук",
     "readMore": "Детальніше",
     "loadMore": "Завантажити ще"
+  },
+  "CatalogById": {
+    "mileage": "Пробіг",
+    "rentalConditions": "Умови оренди",
+    "carSpecifications": "Характеристики автомобіля",
+    "year": "Рік",
+    "type": "Тип",
+    "fuelConsumption": "Витрата палива",
+    "engineSize": "Об'єм двигуна",
+    "accessoriesAndFunctionalities": "Аксесуари та функції",
+    "id": "Ідентифікатор",
+    "form": {
+      "title": "Забронюйте ваш автомобіль зараз",
+      "subtitle": "Будьте на зв'язку! Ми завжди готові вам допомогти.",
+      "name": "Ім'я*",
+      "email": "Електронна пошта*",
+      "bookingDate": "Дата бронювання",
+      "comment": "Коментар",
+      "submit": "Відправити"
+    }
   }
 }

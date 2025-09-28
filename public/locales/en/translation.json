@@ -22,5 +22,25 @@
     "search": "Search",
     "readMore": "Read more",
     "loadMore": "Load more"
+  },
+  "CatalogById": {
+    "mileage": "Mileage",
+    "rentalConditions": "Rental Conditions",
+    "carSpecifications": "Car Specifications",
+    "year": "Year",
+    "type": "Type",
+    "fuelConsumption": "Fuel Consumption",
+    "engineSize": "Engine Size",
+    "accessoriesAndFunctionalities": "Accessories and functionalities",
+    "id": "Id",
+    "form": {
+      "title": "Book your car now",
+      "subtitle": "Stay connected! We are always ready to help you.",
+      "name": "Name*",
+      "email": "Email*",
+      "bookingDate": "Booking Date",
+      "comment": "Comment",
+      "submit": "Send"
+    }
   }
 }
