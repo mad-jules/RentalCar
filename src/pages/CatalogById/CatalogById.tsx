@@ -127,7 +127,7 @@ export function CatalogByIdPage() {
                   name="bookingDate"
                   selected={form.bookingDate}
                   onChange={handleDateChange}
-                  dateFormat="yyyy-MM-dd HH:mm"
+                  dateFormat="yyyy-MM-dd"
                   placeholderText={t("CatalogById.form.bookingDate")}
                 />
 

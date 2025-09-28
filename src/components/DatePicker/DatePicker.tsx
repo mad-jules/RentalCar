@@ -32,8 +32,6 @@ export function DatePicker({
           onChange(name, date);
         }}
         className={css.input}
-        showTimeSelect
-        timeIntervals={15}
         {...props}
       />
     </div>
