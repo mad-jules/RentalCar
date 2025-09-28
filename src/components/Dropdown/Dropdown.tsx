@@ -89,7 +89,7 @@ export function Dropdown({
             {data?.map((item) => (
               <li
                 key={item.value}
-                onClick={(e) => {
+                onClick={() => {
                   handleChange(item);
                 }}
                 className={clsx(
