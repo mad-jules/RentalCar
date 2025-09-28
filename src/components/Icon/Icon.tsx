@@ -12,6 +12,7 @@ export enum ICON_NAMES {
   GEAR = "gear",
   CHECK_CIRCLE = "check-circle",
   SPLITTER = "splitter",
+  CAR = "car",
 }
 
 export type IconName = `${ICON_NAMES}`;
