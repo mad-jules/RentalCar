@@ -22,3 +22,17 @@
   color: var(--secondary-text-color);
   margin-bottom: 8px;
 }
+
+.load_more_btn {
+  color: var(--main-text-color);
+  border: 1px solid var(--button-color);
+  min-width: 156px;
+  background-color: transparent;
+  transition: border-color var(--main-transition);
+}
+
+.load_more_btn:hover,
+.load_more_btn:focus {
+  border-color: var(--button-hover);
+  background-color: transparent;
+}

@@ -179,6 +179,7 @@ export function CatalogPage() {
       {isLoading && <Loader />}
       {totalPages > 1 && currentPage < totalPages && !isLoading ? (
         <Button
+          className={css.load_more_btn}
           style={{ margin: "auto" }}
           onClick={handleLoadMore}
           onMouseUp={blurOnMouseUp}
