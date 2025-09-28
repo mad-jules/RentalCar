@@ -1,10 +1,6 @@
 .wrapper {
-  transition: background-color var(--main-transition);
-}
-
-.wrapper:hover,
-.wrapper:focus {
-  background-color: var(--input-active-bg-color);
+  display: flex;
+  flex-direction: column0;
 }
 
 .wrapper:first-child {
@@ -19,4 +15,19 @@
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 16px;
+  background-color: var(--input-bg-color);
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  flex-grow: 1;
+  transition: background-color var(--main-transition);
+}
+.input:hover,
+.input:focus {
+  background-color: var(--input-active-bg-color);
+}
+.input::placeholder {
+  color: var(--input-placeholder-color);
 }
